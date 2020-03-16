@@ -22,6 +22,7 @@ public class EmployeeController {
 
 	@RequestMapping("/register")
 	public String showEmpRegPage(Model model) {
+		
 		model.addAttribute("employee", new Employee());
 		return "EmployeeRegister";
 	}
