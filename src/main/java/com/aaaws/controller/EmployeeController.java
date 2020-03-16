@@ -22,7 +22,7 @@ public class EmployeeController {
 
 	@RequestMapping("/register")
 	public String showEmpRegPage(Model model) {
-		System.out.println("hell");
+		System.out.println("helloo");
 		model.addAttribute("employee", new Employee());
 		return "EmployeeRegister";
 	}
@@ -43,18 +43,11 @@ public class EmployeeController {
 	}
 
 	@RequestMapping("/delete")
-	public String deleteSelectedIdData(@RequestParam("eid")Integer id, Model model)
-	{
+	public String deleteSelectedIdData(@RequestParam("eid") Integer id, Model model) {
 		service.deleteEmployeeById(id);
-		String msg="Record with '"+id+" 'Done Completed";
+		String msg = "Record with '" + id + " 'Done Completed";
 		model.addAttribute("message", msg);
 		return "EmployeeData";
 	}
-	
-	
-	
-	
-	
-	
-	
+
 }
