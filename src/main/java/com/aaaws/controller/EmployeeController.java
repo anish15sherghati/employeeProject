@@ -22,7 +22,6 @@ public class EmployeeController {
 
 	@RequestMapping("/register")
 	public String showEmpRegPage(Model model) {
-		System.out.println("helloo");
 		model.addAttribute("employee", new Employee());
 		return "EmployeeRegister";
 	}
